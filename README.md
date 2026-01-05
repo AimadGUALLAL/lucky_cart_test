@@ -33,7 +33,7 @@ Les données finales alimentent des dashboards BI (Looker / Data Studio) ou Tabl
 
 ## Les requetes SQL 
 
-Pour simplifier l’exemple, j’ai utilisé un fichier JSON stocké dans GCS, et pour accéder directement aux données dans BigQuery, j’ai créé une table externe qui contient toutes les informations arrivant dans le Data Lake. La requête SQL correspondante est décrite ci-dessous. Ensuite, cette table externe sert de source pour créer les tables nécessaires ou les tables intermédiaires. Bien sûr, comme indiqué dans l’architecture, dans un contexte de production il serait nécessaire d’utiliser des services et des approches plus sophistiquées pour transférer et transformer les données depuis GCS vers BigQuery. Enfin, le fichier stocké dans le Data Lake doit être au format NDJSON pour que les requêtes fonctionnent correctement.
+Pour simplifier l’exemple, j’ai utilisé un fichier JSON stocké dans GCS, et pour accéder directement aux données dans BigQuery, j’ai créé une table externe qui contient toutes les informations arrivant dans le Data Lake. La requête SQL correspondante est décrite ci-dessous. Ensuite, cette table externe sert de source pour créer les tables nécessaires ou les tables intermédiaires. Bien sûr, comme indiqué dans l’architecture, dans un contexte de production il serait nécessaire d’utiliser des services et des approches plus sophistiquées pour transférer et transformer les données depuis GCS vers BigQuery et pour assurer l'actualisation des données aussi. Enfin, le fichier stocké dans le Data Lake doit être au format NDJSON pour que les requêtes fonctionnent correctement.
 
 Le nom de dataset dans BigQuery est lucky_cart. 
 
