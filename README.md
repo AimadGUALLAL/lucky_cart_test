@@ -2,6 +2,9 @@
 
 Puisque les données de transactions sont reçues depuis les sites des retailers sous forme d’événements JSON, je propose de mettre en place un système qui les injecte automatiquement dans une zone d’atterrissage au sein d’un Data Lake, constituant la raw layer. Ensuite, nous pourrons utiliser différents services pour transformer et structurer les données, afin de préparer des tables et KPIs exploitables pour la BI. Cette architecture peut être mise en œuvre aussi bien sur AWS que sur GCP, en suivant la même logique, selon les services disponibles. Pour ce projet, j’ai utilisé principalement BigQuery afin de pouvoir écrire et tester facilement les requêtes SQL nécessaires aux transformations et analyses.
 
+
+<img src= "images/diagram_retail.png" height=400 width=600>
+
 1. Retailers (JSON events)
 Les sites partenaires envoient les événements utilisateurs (ajout au panier, validation, annulation) au système via Pub/Sub, permettant une ingestion en quasi temps réel et fiable.
 
